@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CustomCheckbox from './CustomCheckbox'
 
-const PAGES = ['Page 1', 'Page 2', 'Page 3', 'Page 4','Page 5', 'Page 6', 'Page 7','Page 8', 'Page 9', 'Page 10'] // Reverted to original number of pages
+const PAGES = ['Page 1', 'Page 2', 'Page 3', 'Page 4','Page 5', 'Page 6', 'Page 7','Page 8', 'Page 9', 'Page 10']
 
 const COLORS = {
   yellow: '#FFD23F',
@@ -47,14 +47,14 @@ export default function PageSelector() {
   return (
     <div className="h-[100vh] w-[100vw] flex items-center justify-center" style={{ background: COLORS.pageBg }}>
       <div
-        className="w-[370px] h-[326px] rounded-[6px] bg-white py-[10px]" /* Updated width, height, border-radius, and vertical padding */
+        className="w-[370px] h-[326px] rounded-[6px] bg-white py-[10px]"
         style={{
           boxShadow: '0 18px 40px rgba(2,6,23,0.10)',
           border: '1px solid rgba(0,0,0,0.04)'
         }}
       >
         {/* Header */}
-        <div className="h-[42px] pl-[22px] pr-[15px] py-[8px] flex items-center justify-between rounded-t-[6px]"> {/* Adjusted height, padding and border-radius */}
+        <div className="h-[42px] pl-[22px] pr-[15px] py-[8px] flex items-center justify-between rounded-t-[6px]">
           <div className="text-sm font-medium" style={{ color: COLORS.textPrimary }}>All pages</div>
           <CustomCheckbox
             ariaLabel="Select all"
@@ -69,13 +69,13 @@ export default function PageSelector() {
 
         {/* List */}
         <div 
-          className="py-[3px] h-[164px] overflow-y-auto scrollbar-hide" /* Adjusted padding and height for scroll */
+          className="py-[3px] h-[164px] overflow-y-auto scrollbar-hide"
           style={{
             msOverflowStyle: 'none',
             scrollbarWidth: 'none', 
         }}>
           {PAGES.map((p) => (
-            <div key={p} className="flex items-center justify-between h-[42px] pl-[22px] pr-[15px] py-[8px]"> {/* Adjusted padding for 42px height */}
+            <div key={p} className="flex items-center justify-between h-[42px] pl-[22px] pr-[15px] py-[8px]">
               <div className="text-sm" style={{ color: COLORS.textMuted }}>{p}</div>
               <CustomCheckbox
                 ariaLabel={`Select ${p}`}
@@ -91,10 +91,10 @@ export default function PageSelector() {
         </div>
 
         {/* Done button */}
-        <div className="h-[60px] pl-[15px] pr-[15px] pt-[10px] pb-[10px] flex items-center justify-center"> {/* Adjusted height and padding */}
+        <div className="h-[60px] pl-[15px] pr-[15px] pt-[10px] pb-[10px] flex items-center justify-center">
           <button
             onClick={done}
-            className="w-[340px] h-[40px] px-[20px] py-[10px] rounded-[4px] focus:outline-none transition-shadow flex items-center justify-center" /* Updated width, height, padding, border-radius, and added flex for centering */
+            className="w-[340px] h-[40px] px-[20px] py-[10px] rounded-[4px] focus:outline-none transition-shadow flex items-center justify-center"
             style={{
               background: COLORS.yellow,
               color: '#000000',
