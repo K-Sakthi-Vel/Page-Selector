@@ -2,8 +2,8 @@
 .custom-checkbox-container {
   position: relative;
   display: inline-block;
-  width: 20px; /* h-4 */
-  height: 20px; /* w-4 */
+  width: 25px; /* Increased size */
+  height: 25px; /* Increased size */
   cursor: pointer;
 }
 
@@ -19,8 +19,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 25px; /* Increased size */
+  width: 25px; /* Increased size */
   background-color: #fff; /* Default background */
   border: 1px solid #D1D5DB; /* border-gray-300 */
   border-radius: 4px; /* rounded */
@@ -43,10 +43,10 @@
   content: "";
   position: absolute;
   display: none; /* Hidden by default */
-  left: 7px;
-  top: 4px;
-  width: 4px;
-  height: 8px;
+  left: 8px; /* Adjusted position for 25px checkbox */
+  top: 5px; /* Adjusted position for 25px checkbox */
+  width: 6px;
+  height: 12px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -58,20 +58,16 @@
   display: block; /* Show when checked */
 }
 
-/* Hide the checkmark on hover when checked */
-.custom-checkbox-container:hover .custom-checkbox-input:checked ~ .custom-checkbox-checkmark:after {
-  opacity: 0; /* Make it disappear smoothly */
-}
 
 /* Show the checkmark on hover when not checked (for the grey tick effect) */
 .custom-checkbox-container:hover .custom-checkbox-checkmark:before {
   content: "";
   position: absolute;
   display: block; /* Show on hover */
-  left: 7px;
-  top: 4px;
-  width: 4px;
-  height: 8px;
+  left: 8px; /* Adjusted position for 25px checkbox */
+  top: 5px; /* Adjusted position for 25px checkbox */
+  width: 6px;
+  height: 12px;
   border: solid #9CA3AF; /* Grey color for hover tick */
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
